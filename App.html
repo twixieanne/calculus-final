@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications of Integrals | Integral Calculus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img id="ic" src="Assets/logo.png" alt="logo">
+        <h1>Integral Calculus Tutorial</h1>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <h3>Integral Calculus</h3>
+        <a href="index.html">Home</a>
+        <a href="intro.html">Introduction</a>
+        <a href="BasicInt.html">Basic Integrals</a>
+        <a href="sub.html">Substitution</a>
+        <a href="IntByPart.html">Integration by Parts</a>
+        <a href="DefInt.html">Definite Integrals</a>
+        <a href="App.html">Applications</a>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <h2>Applications of Integrals</h2>
+            <div class="nav-buttons">
+                <a href="DefInt.html">← Previous</a>
+                <a href="#" class="disabled">Next →</a>
+            </div>
+
+            <div class="theory-section">
+                <h3>Practical Applications</h3>
+                <p>Integral calculus has numerous real-world applications across various fields.</p>
+
+                <div class="application-card">
+                    <h4>1. Area Between Curves</h4>
+                    <div class="formula-box">
+                        <p>A = ∫<sub>a</sub><sup>b</sup> |f(x) - g(x)| dx</p>
+                    </div>
+                </div>
+
+                <div class="application-card">
+                    <h4>2. Volume of Revolution</h4>
+                    <div class="formula-box">
+                        <p>Disk Method: V = π ∫<sub>a</sub><sup>b</sup> [f(x)]² dx</p>
+                        <p>Shell Method: V = 2π ∫<sub>a</sub><sup>b</sup> x·f(x) dx</p>
+                    </div>
+                </div>
+
+                <div class="application-card">
+                    <h4>3. Work in Physics</h4>
+                    <div class="formula-box">
+                        <p>W = ∫<sub>a</sub><sup>b</sup> F(x) dx</p>
+                    </div>
+                </div>
+
+                <div class="application-card">
+                    <h4>4. Average Value</h4>
+                    <div class="formula-box">
+                        <p>f<sub>avg</sub> = (1/(b-a)) ∫<sub>a</sub><sup>b</sup> f(x) dx</p>
+                    </div>
+                </div>
+
+                <div class="application-card">
+                    <h4>5. Arc Length</h4>
+                    <div class="formula-box">
+                        <p>L = ∫<sub>a</sub><sup>b</sup> √(1 + [f'(x)]²) dx</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examples-section">
+                <h3>Worked Examples</h3>
+
+                <div class="example">
+                    <h4>Example 1: Area Between y = x² and y = x</h4>
+                    <p>Find the area between these curves from x = 0 to x = 1</p>
+                    <button class="solution-toggle" data-target="solution1">Show Solution</button>
+                    <div class="hidden-content" id="solution1">
+                        <p>Upper curve: y = x, Lower curve: y = x²</p>
+                        <p>A = ∫<sub>0</sub><sup>1</sup> (x - x²) dx</p>
+                        <p>= [½x² - ⅓x³]<sub>0</sub><sup>1</sup> = (½ - ⅓) - 0 = ⅙</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Example 2: Volume of y = √x rotated about x-axis (0 to 4)</h4>
+                    <button class="solution-toggle" data-target="solution2">Show Solution</button>
+                    <div class="hidden-content" id="solution2">
+                        <p>Using disk method:</p>
+                        <p>V = π ∫<sub>0</sub><sup>4</sup> (√x)² dx = π ∫<sub>0</sub><sup>4</sup> x dx</p>
+                        <p>= π [½x²]<sub>0</sub><sup>4</sup> = π(8 - 0) = 8π</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Example 3: Work to stretch a spring (F(x) = 3x) from x=0 to x=2</h4>
+                    <button class="solution-toggle" data-target="solution3">Show Solution</button>
+                    <div class="hidden-content" id="solution3">
+                        <p>W = ∫<sub>0</sub><sup>2</sup> 3x dx</p>
+                        <p>= [³⁄₂x²]<sub>0</sub><sup>2</sup> = 6 - 0 = 6 Joules</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Example 4: Average value of f(x) = sin x on [0, π]</h4>
+                    <button class="solution-toggle" data-target="solution4">Show Solution</button>
+                    <div class="hidden-content" id="solution4">
+                        <p>f<sub>avg</sub> = (1/π) ∫<sub>0</sub><sup>π</sup> sin x dx</p>
+                        <p>= (1/π) [-cos x]<sub>0</sub><sup>π</sup> = (1/π)[1 - (-1)] = 2/π</p>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Example 5: Arc length of y = x^(3/2) from (0,0) to (1,1)</h4>
+                    <button class="solution-toggle" data-target="solution5">Show Solution</button>
+                    <div class="hidden-content" id="solution5">
+                        <p>f'(x) = (3/2)x^(½)</p>
+                        <p>L = ∫<sub>0</sub><sup>1</sup> √(1 + (9/4)x) dx</p>
+                        <p>Let u = 1 + (9/4)x ⇒ du = (9/4)dx</p>
+                        <p>= (4/9) ∫ u^(½) du = (8/27)u^(3/2) | from 1 to 13/4</p>
+                        <p>= (8/27)[(13/4)^(3/2) - 1] ≈ 1.44 units</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interactive-exercises">
+                <h3>Interactive Exercises</h3>
+                <p>Solve these problems and check your answers:</p>
+
+                <div class="exercise">
+                    <h4>Exercise 1: Area between y = 4 - x² and y = x + 2</h4>
+                    Answer: A = <input type="text" id="answer1" placeholder="Enter answer">
+                    <button class="check-answer" data-problem="1">Check</button>
+                    <button onclick class="show-solution" data-problem="1">Show Solution</button>
+                    <div class="hidden-content" id="exans1">
+                        <p>To find the area between the curves:</p>
+                        <p>1. Set the curves equal to find the points of intersection:</p>
+                        <img id="a11" src="Assets/a11.png" alt="a11">
+                        <p>Factoring:</p>
+                        <img id="a12" src="Assets/a12.png" alt="a12">
+                        <p>
+                            So,
+                            𝑥
+                            =
+                            1
+                            and
+                            x
+                            =
+                            −
+                            2.</p>
+                        <p>2. Integrate the difference between the curves:<br>
+                        <img id="a21" src="Assets/a21.png" alt="a21">
+                    </div>
+                    <div id="feedback1" class="feedback"></div>
+                </div>
+
+                <div class="exercise">
+                    <h4>Exercise 2: Volume of y = x² rotated about y-axis (0 to 1)</h4>
+                    Answer: V = <input type="text" id="answer2" placeholder="Enter answer">
+                    <button class="check-answer" data-problem="2">Check</button>
+                    <button class="show-solution" data-problem="2">Show Solution</button>
+                    <div class="hidden-content" id="exans2">
+                        <p>Set up the integral:<br>
+                        <img id = "b11" src = "Assets/b11.png" alt="b11"></p>
+                        <p>This simplifies to:<br>
+                        <img id = "b12" src = "Assets/b12.png" alt="b12"></p>
+                        <p>2. Solve the integral:</p>
+                        <img id = "b21" src = "Assets/b21.png" alt="b21">
+                    </div>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div class="exercise">
+                    <h4>Exercise 3: Work to compress a spring F(x) = 5x from x=1 to x=3</h4>
+                    Answer: W = <input type="text" id="answer3" placeholder="Enter answer">
+                    <button class="check-answer" data-problem="3">Check</button>
+                    <button class="show-solution" data-problem="3">Show Solution</button>
+                    <div class="hidden-content" id="exans3">
+                        <p>1. Set up the integral:<br>
+                        <img id = "c11" src = "Assets/c11.png" alt="c11"></p>
+                        <p>2. Solve the integral:<br>
+                        <img id = "c21" src = "Assets/c21.png" alt = "c21"></p>
+                    </div>
+                    <div id="feedback3" class="feedback"></div>
+                </div>
+
+                <div class="exercise">
+                    <h4>Exercise 4: Average value of f(x) = e^x on [0, ln2]</h4>
+                    Answer: f<sub>avg</sub> = <input type="text" id="answer4" placeholder="Enter answer">
+                    <button class="check-answer" data-problem="4">Check</button>
+                    <button class="show-solution" data-problem="4">Show Solution</button>
+                    <div class="hidden-content" id="exans4">
+                        <p>The average value of a function over an interval [a, b] is given by:<br>
+                        <img id = "d11" src = "Assets/d11.png" alt="d11"></p>
+                        <p>For this problem:<br>
+                        <img id = "d12" src="Assets/d12.png" alt="d12"></p>
+                        <p>1. Solve the integral:<br>
+                        <img id = "d21" src = "Assets/d21.png" alt="d21"></p>
+                    </div>
+                    <div id="feedback4" class="feedback"></div>
+                </div>
+
+                <div class="exercise">
+                    <h4>Exercise 5: Arc length of y = ln(cosx) from x=0 to x=π/4</h4>
+                    Answer: L = <input type="text" id="answer5" placeholder="Enter answer">
+                    <button class="check-answer" data-problem="5">Check</button>
+                    <button class="show-solution" data-problem="5">Show Solution</button>
+                    <div class="hidden-content" id="exans5">
+                        <p>The arc length formula is:<br>
+                        <img id = "e11" src="Assets/e11.png" alt="e11"></p>
+                        <p>2. Set up the integral<br>
+                        <img id = "e21"src = "Assets/e21.png" alt="e21"></p>
+                        <p>3. Solve the integral:<br>
+                        <img id = "e31" src ="Assets/e31.png" alt="e31"></p>
+                    </div>
+                    <div id="feedback5" class="feedback"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
